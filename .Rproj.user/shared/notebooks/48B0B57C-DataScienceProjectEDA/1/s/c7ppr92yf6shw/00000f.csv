@@ -1,0 +1,6 @@
+"0","library(readr)"
+"2","Warning: package ‘readr’ was built under R version 4.3.2"
+"0","library(here)"
+"2","here() starts at C:/Users/kayle/OneDrive/Desktop/Cogs-212-EDA
+"
+"0","SurveyData <- read_csv(here(""data"",""SurveyData.csv""), show_col_types = FALSE)"

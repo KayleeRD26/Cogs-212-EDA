@@ -1,0 +1,7 @@
+"0","# Calculating mean and median age"
+"0","mean_age <-"
+"0","  mean(SurveyData$Age, na.rm = TRUE) # na.rm = TRUE ensures that NA values are removed"
+"0","median_age <- median(SurveyData$Age, na.rm = TRUE)"
+"0",""
+"0","cat(sprintf(""Mean Age: %.2f, Median Age: %.2f"", mean_age, median_age))"
+"1","Mean Age: 40.38, Median Age: 45.00"

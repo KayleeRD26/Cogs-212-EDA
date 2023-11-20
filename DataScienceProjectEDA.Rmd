@@ -5,7 +5,7 @@ date: "2023-10-25"
 output: html_document
 ---
 
-### Research Questions ###
+# Research Questions #
     
 Q1: Whether age-group affects appraisals of technology
 Q2: Whether income-level negatively affects an individuals appraisals of technology (lower = more neg)
@@ -18,7 +18,7 @@ library(renv)
 restore()
 ```
 
-### Read in data ###
+# Read in data #
 ```{r}
 library(readr)
 library(here)
@@ -26,7 +26,7 @@ library(here)
 SurveyData <- read_csv(here("data","SurveyData.csv"), show_col_types = FALSE)
 ```
 
-### Check the packaging ###
+# Check the packaging #
 ```{r}
 library(skimr)
 
@@ -37,7 +37,7 @@ skim(SurveyData)
 Data is 100% complete, no concern over missing values 
 
 
-### Look at the top and the bottom of the data ### 
+# Look at the top and the bottom of the data #
 ```{r}
 library(skimr)
 
@@ -50,7 +50,7 @@ if (interactive()) {
 
 
 
-# Created Variables and Relevant Overview Plots #
+## Created Variables and Relevant Overview Plots ##
 ```{r}
 library(ggplot2)
 
@@ -111,7 +111,7 @@ ggplot(data = SurveyData, aes(x = Age, fill = Gender)) +
 ```
 
 
-Income Category Variable Created 
+## Income Category Variable Created ##
 ```{r}
 # Define labels for the income categories
 breaks <- c(0, 200000, 600000, 1200000, 2000000, Inf)
@@ -138,7 +138,7 @@ write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
 ```
 
 
-# Variable for TotalTechConcern Created 
+## Variable for TotalTechConcern Created ##
 ```{r}
 library(dplyr)
 
@@ -150,7 +150,7 @@ SurveyData <- SurveyData %>%
 write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
 ```
 
-# Variable for TotalTechBenefit Created 
+## Variable for TotalTechBenefit Created ##
 ```{r}
 library(dplyr)
 
@@ -163,7 +163,7 @@ write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
 ```
 
 
-### Plots that look at the questions ###
+## Plots that look at the questions ##
 
 Plotting the correlation between Age and TotalTechConcern
     Relevant Question: Does age-group affect appraisals of technology?
@@ -188,7 +188,7 @@ print(correlation)
  
 
 
-# Plotting the relationship between IncomeCategory and TotalTechConcern
+## Plotting the relationship between IncomeCategory and TotalTechConcern ##
      Relevant Question: Whether income-level negatively affects an individuals appraisals of technology (lower = more neg)
     
 ```{r}
@@ -206,7 +206,7 @@ ggplot(data = SurveyData, aes(x = IncomeCategory, y = TotalTechConcern)) +
 anova_result <- aov(TotalTechConcern ~ IncomeCategory, data = SurveyData)
 summary(anova_result)
 ```
-## Results & Follow up ##
+# Results & Follow up 
 
 P > 0.05 (No significant effect) for both observations. Therefore, income-level and age-group does not correlate with an individuals appraisals of technology. 
 

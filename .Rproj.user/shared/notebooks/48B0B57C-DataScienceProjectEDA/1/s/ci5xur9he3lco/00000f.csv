@@ -1,0 +1,8 @@
+"0","library(dplyr)"
+"0",""
+"0","# Calculate the TotalTechBenefit by summing all columns that start with 'Benefit'"
+"0","SurveyData <- SurveyData %>%"
+"0","  mutate(TotalTechBenefit = rowSums(select(., starts_with(""Benefit"")), na.rm = TRUE))"
+"0",""
+"0","# add var to the dataframe"
+"0","write.csv(SurveyData, ""SurveyData.csv"", row.names = FALSE)"

@@ -1,0 +1,8 @@
+"0","library(dplyr)"
+"0",""
+"0","# TotalTechConcern calculated by summing all columns that start with 'Risk'"
+"0","SurveyData <- SurveyData %>%"
+"0","  mutate(TotalTechConcern = rowSums(select(., starts_with(""Risk""))))"
+"0",""
+"0","# add var to the dataframe"
+"0","write.csv(SurveyData, ""SurveyData.csv"", row.names = FALSE)"

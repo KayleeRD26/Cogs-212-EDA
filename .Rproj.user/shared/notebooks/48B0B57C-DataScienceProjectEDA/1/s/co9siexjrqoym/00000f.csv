@@ -1,0 +1,7 @@
+"0","library(skimr)"
+"0",""
+"0","if (interactive()) {"
+"0","  View(head(SurveyData))"
+"0","  View(tail(SurveyData))"
+"0","  View(SurveyData)"
+"0","}"

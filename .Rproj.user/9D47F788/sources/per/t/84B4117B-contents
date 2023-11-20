@@ -1,0 +1,222 @@
+---
+title: "Data Science Project EDA"
+author: "Kaylee Davis"
+date: "2023-10-25"
+output: html_document
+---
+
+# Research Questions #
+    
+Q1: Whether age-group affects appraisals of technology
+Q2: Whether income-level negatively affects an individuals appraisals of technology (lower = more neg)
+
+# Setup # 
+
+```{r}
+library(renv)
+# Using renv restore function to get dependencies 
+restore()
+```
+
+# Read in data #
+```{r}
+library(readr)
+library(here)
+
+SurveyData <- read_csv(here("data","SurveyData.csv"), show_col_types = FALSE)
+```
+
+# Check the packaging #
+```{r}
+library(skimr)
+
+skim(SurveyData)
+```
+
+107 rows, 33 columns 
+Data is 100% complete, no concern over missing values 
+
+
+# Look at the top and the bottom of the data #
+```{r}
+library(skimr)
+
+if (interactive()) {
+  View(head(SurveyData))
+  View(tail(SurveyData))
+  View(SurveyData)
+}
+```
+
+
+
+## Created Variables and Relevant Overview Plots ##
+```{r}
+library(ggplot2)
+
+# Age distribution Histogram
+ggplot(SurveyData, aes(x = Age)) +
+  geom_histogram(
+    bins = 20,
+    fill = "blue",
+    color = "black",
+    alpha = 0.7
+  ) +
+  labs(x = "Age", y = "Count", title = "Distribution of Respondents' Age") +
+  theme_minimal()
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Gender distribution pie chart
+SurveyData %>%
+  count(Gender) %>%
+  ggplot(aes(x = "", y = n, fill = Gender)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  scale_fill_brewer(palette = "Pastel1") +
+  theme_void() +
+  labs(title = "Gender Distribution") +
+  geom_text(aes(label = scales::percent(n / sum(n), accuracy = 0.1)),
+    position = position_stack(vjust = 0.5)
+  )
+```
+
+
+```{r}
+# Calculating mean and median age
+mean_age <-
+  mean(SurveyData$Age, na.rm = TRUE) # na.rm = TRUE ensures that NA values are removed
+median_age <- median(SurveyData$Age, na.rm = TRUE)
+
+cat(sprintf("Mean Age: %.2f, Median Age: %.2f", mean_age, median_age))
+```
+
+```{r}
+library(ggplot2)
+
+# Histogram plot of Age with color based on Gender
+SurveyData$Gender <- factor(SurveyData$Gender, levels = c("Male", "Female"))
+
+ggplot(data = SurveyData, aes(x = Age, fill = Gender)) +
+  geom_histogram(
+    position = "stack",
+    binwidth = 3,
+    colour = "grey"
+  ) +
+  labs(title = "Number of Male and Female by Age") +
+  theme_minimal()
+```
+
+
+## Income Category Variable Created ##
+```{r}
+# Define labels for the income categories
+breaks <- c(0, 200000, 600000, 1200000, 2000000, Inf)
+labels <-
+  c(
+    "Low Income",
+    "Lower-Middle Income",
+    "Middle-Middle Income",
+    "Upper-Middle Income",
+    "High Income"
+  )
+
+# Create the IncomeCategory variable
+SurveyData$IncomeCategory <-
+  cut(
+    SurveyData$HouseholdIncome,
+    breaks = breaks,
+    labels = labels,
+    include.lowest = TRUE
+  )
+
+# add var to the dataframe
+write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
+```
+
+
+## Variable for TotalTechConcern Created ##
+```{r}
+library(dplyr)
+
+# TotalTechConcern calculated by summing all columns that start with 'Risk'
+SurveyData <- SurveyData %>%
+  mutate(TotalTechConcern = rowSums(select(., starts_with("Risk"))))
+
+# add var to the dataframe
+write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
+```
+
+## Variable for TotalTechBenefit Created ##
+```{r}
+library(dplyr)
+
+# Calculate the TotalTechBenefit by summing all columns that start with 'Benefit'
+SurveyData <- SurveyData %>%
+  mutate(TotalTechBenefit = rowSums(select(., starts_with("Benefit")), na.rm = TRUE))
+
+# add var to the dataframe
+write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
+```
+
+
+## Plots that look at the questions ##
+
+Plotting the correlation between Age and TotalTechConcern
+    Relevant Question: Does age-group affect appraisals of technology?
+
+```{r}
+library(ggplot2)
+
+ggplot(data = SurveyData, aes(x = Age, y = TotalTechConcern)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "blue") +
+  labs(
+    x = "Age", y = "Total Tech Concern",
+    title = "Correlation between Age and Total Tech Concern"
+  ) +
+  theme_minimal()
+
+# Calculate and print the correlation coefficient
+correlation <-
+  cor.test(SurveyData$Age, SurveyData$TotalTechConcern, use = "complete.obs") # use handles missing values
+print(correlation)
+```
+ 
+
+
+## Plotting the relationship between IncomeCategory and TotalTechConcern ##
+     Relevant Question: Whether income-level negatively affects an individuals appraisals of technology (lower = more neg)
+    
+```{r}
+library(ggplot2)
+
+ggplot(data = SurveyData, aes(x = IncomeCategory, y = TotalTechConcern)) +
+  geom_boxplot() +
+  labs(
+    x = "Income Category", y = "Total Tech Concern",
+    title = "Total Tech Concern across Income Categories"
+  ) +
+  theme_minimal()
+
+# ANOVA to test if differences in TotalTechConcern are statistically significant across IncomeCategory
+anova_result <- aov(TotalTechConcern ~ IncomeCategory, data = SurveyData)
+summary(anova_result)
+```
+# Results & Follow up 
+
+P > 0.05 (No significant effect) for both observations. Therefore, income-level and age-group does not correlate with an individuals appraisals of technology. 
+
+Problem of Gender Imbalance: To counter the overrepresentation of male participants, future iterations of the survey could aim for a more balanced gender representation.
+
+Diversifying Geographic Representation: The data is gathered from participants residing in India. As a result, generalizability is called into question. Conducting the survey in different countries or regions would provide comparative insights and reveal whether the trends observed are specific to India or more universally applicable. 
+
+Fit for Purpose: The data aligns well with the specific research questions I have, however, the sample representativeness is a weak point of the data. generalizability is not possible with this data, therefore, it is not fit for purpose. Regardless, the data provides a good starting point.  
+
+
+
+
+
