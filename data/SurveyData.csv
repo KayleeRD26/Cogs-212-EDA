@@ -1,0 +1,108 @@
+"Age","Gender","EducationLevel","HouseholdIncome","Frequency_LaptopDesktop","Frequency_Smartphone","Frequency_Tablet","Frequency_SmartHomeDevices","Frequency_WearableDevices","Frequency_GamingConsoles","Frequency_HomeSecuritySystem","LikelinessToAdopt","Benefit_ProductivityEfficiency","Benefit_CommunicationConnectivity","Benefit_EasyAccessToInfo","Benefit_Entertainment","Risk_SecurityPrivacy","Risk_ExcessScreenTime","Risk_ComplicatedToUse","Risk_Addiction","Risk_Health","Risk_LossOfConnection","Influence_FamilyFriends","Influence_PromoActivities","Influence_SocialPopularity","Influence_ExpertRecommendation","Influence_Endorsements","Barrier_HighPrice","Barrier_TechKnowledge","Barrier_PrivacySecurity","Barrier_ReliableInternet","Barrier_ChangeReluctance","LikelinessToRecommend","IncomeCategory","TotalTechConcern","TotalTechBenefit"
+25,"Female","Bachelor's Degree",1500000,4,5,0,4,0,0,0,3,4,4,5,5,4,4,4,4,4,3,5,3,5,4,2,3,4,4,3,4,4,"Upper-Middle Income",23,18
+48,"Female","Bachelor's Degree",8e+05,3,5,5,4,5,2,3,4,5,5,5,5,4,3,2,2,2,4,4,4,4,4,2,2,4,4,4,4,5,"Middle-Middle Income",17,20
+49,"Male","Master's Degree",3e+07,4,4,0,2,0,0,0,4,4,4,4,4,5,5,4,4,5,5,3,3,3,3,1,5,5,5,3,4,3,"High Income",28,16
+38,"Male","Bachelor's Degree",20000,1,0,1,1,1,2,1,3,1,2,1,2,1,2,2,1,2,3,3,2,3,3,2,1,3,2,3,2,3,"Low Income",11,6
+45,"Male","Bachelor's Degree",5e+06,5,5,3,5,5,0,0,5,5,5,5,5,3,3,3,2,3,4,3,3,3,3,3,3,3,3,3,3,5,"High Income",18,20
+45,"Female","Bachelor's Degree",1200000,4,4,3,4,4,2,2,5,4,4,4,4,4,5,5,5,5,5,3,3,4,4,3,3,3,3,3,3,5,"Middle-Middle Income",29,16
+47,"Male","Doctorate",5e+06,5,5,4,4,4,3,3,4,4,4,4,4,5,4,3,4,3,4,4,4,4,4,4,5,5,5,4,5,5,"High Income",23,16
+55,"Female","Bachelor's Degree",60000,1,0,1,0,1,2,1,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,"Low Income",18,12
+49,"Male","Master's Degree",6e+05,0,0,1,1,1,1,0,1,4,4,4,4,1,2,2,2,2,2,4,4,4,4,4,2,4,3,4,1,5,"Lower-Middle Income",11,16
+41,"Male","Master's Degree",8e+05,0,0,0,0,0,2,1,2,3,2,3,3,2,2,2,2,2,3,1,1,1,1,1,2,3,3,2,3,5,"Middle-Middle Income",13,11
+34,"Male","Master's Degree",5e+05,5,5,5,5,5,4,3,1,3,3,3,3,2,2,2,2,2,2,3,3,3,3,3,1,1,1,1,1,1,"Lower-Middle Income",12,12
+43,"Male","Bachelor's Degree",6e+05,5,5,5,5,5,0,3,5,5,5,5,5,1,1,1,1,1,1,5,5,5,5,5,5,3,3,3,3,5,"Lower-Middle Income",6,20
+41,"Male","Bachelor's Degree",4e+05,5,5,2,5,5,3,0,5,5,5,5,5,4,5,3,5,3,2,5,3,5,5,3,2,1,5,1,1,5,"Lower-Middle Income",22,20
+62,"Male","Master's Degree",1.5e+07,0,0,2,0,2,2,0,5,1,1,1,1,3,2,2,2,2,2,3,4,2,1,1,1,1,2,2,2,5,"High Income",13,4
+35,"Male","Master's Degree",1e+06,4,5,3,3,4,1,2,5,5,5,5,5,4,4,2,3,3,1,4,3,2,3,2,1,1,1,5,2,3,"Middle-Middle Income",17,20
+35,"Male","Master's Degree",1500000,2,2,2,0,1,0,2,5,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,3,2,3,2,3,5,"Upper-Middle Income",18,12
+61,"Male","Master's Degree",5e+05,4,4,0,4,0,0,0,5,5,5,5,4,4,5,4,5,5,5,4,4,4,4,4,5,5,5,5,4,4,"Lower-Middle Income",28,19
+43,"Male","Bachelor's Degree",6e+05,4,5,4,3,4,1,0,5,1,1,1,3,4,3,3,3,2,5,3,3,2,1,2,3,1,5,3,1,5,"Lower-Middle Income",20,6
+45,"Male","Master's Degree",6e+06,4,4,3,4,0,1,0,4,1,1,1,1,4,4,3,3,4,4,4,3,3,4,3,4,3,4,2,2,4,"High Income",22,4
+48,"Male","Bachelor's Degree",4e+05,2,5,2,4,0,0,1,2,4,3,5,5,3,1,1,1,1,1,3,3,4,5,3,5,1,3,1,1,5,"Lower-Middle Income",8,17
+50,"Male","Bachelor's Degree",5e+05,5,5,4,4,0,0,0,4,4,4,5,4,2,4,2,5,3,4,1,1,1,4,3,5,3,4,4,2,1,"Lower-Middle Income",20,17
+23,"Male","Master's Degree",4e+06,5,5,0,1,0,5,0,5,5,4,5,5,3,4,2,1,1,4,1,1,1,2,1,1,5,4,4,1,4,"High Income",15,19
+55,"Male","Master's Degree",1.5e+07,5,5,5,4,4,3,4,4,5,5,5,5,2,4,2,2,2,3,4,4,4,5,3,2,2,2,2,2,4,"High Income",15,20
+21,"Female","Master's Degree",3600000,4,4,2,0,1,2,2,3,4,4,5,5,4,4,4,5,5,4,4,3,3,4,2,4,3,4,4,3,3,"High Income",26,18
+51,"Male","Bachelor's Degree",8e+05,0,4,0,0,0,0,0,3,3,4,4,3,4,4,3,4,4,4,2,2,2,2,2,5,3,5,1,1,3,"Middle-Middle Income",23,14
+42,"Male","Master's Degree",1e+05,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,"Low Income",30,20
+19,"Female","Bachelor's Degree",4e+05,3,5,4,4,4,3,3,4,3,4,5,5,3,4,3,5,5,3,3,3,4,4,4,3,2,2,4,4,4,"Lower-Middle Income",23,17
+50,"Male","Bachelor's Degree",6e+05,5,5,0,0,5,0,0,5,5,5,5,5,5,5,5,5,5,5,3,3,5,5,3,1,1,5,5,1,1,"Lower-Middle Income",30,20
+26,"Male","Master's Degree",1200000,5,5,5,5,5,3,1,5,4,4,5,5,2,2,1,2,3,3,3,2,2,4,1,4,2,2,4,1,5,"Middle-Middle Income",13,18
+58,"Male","Bachelor's Degree",9e+05,0,5,0,4,4,0,0,5,4,5,5,5,5,5,4,4,4,5,3,2,3,2,1,2,2,3,2,2,4,"Middle-Middle Income",27,19
+26,"Female","Master's Degree",2e+06,2,2,0,2,2,0,2,4,4,4,5,4,4,4,2,4,4,4,5,4,4,5,5,4,3,4,2,2,4,"Upper-Middle Income",22,17
+56,"Male","Master's Degree",1500000,1,1,1,1,1,0,0,5,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,5,5,5,5,5,1,"Upper-Middle Income",24,16
+50,"Female","Master's Degree",9e+05,4,5,0,4,0,0,0,4,5,5,5,4,5,3,2,2,3,2,4,2,3,4,1,4,1,5,1,1,5,"Middle-Middle Income",17,19
+19,"Female","Bachelor's Degree",2.4e+07,3,5,0,3,5,0,0,4,3,4,4,4,3,3,2,2,2,4,3,3,2,3,2,2,2,4,3,2,4,"High Income",16,15
+27,"Female","Bachelor's Degree",3e+05,0,4,0,0,0,0,0,3,3,3,3,2,4,4,4,4,4,4,3,3,3,3,3,4,5,5,4,2,2,"Lower-Middle Income",24,11
+34,"Male","Master's Degree",1e+06,0,0,3,3,5,1,4,5,4,4,4,4,3,3,3,3,3,3,4,4,4,4,4,2,2,2,2,2,5,"Middle-Middle Income",18,16
+26,"Male","Bachelor's Degree",20474175,4,5,0,4,0,3,2,3,4,5,5,5,5,5,1,5,5,4,3,3,3,3,2,1,1,4,1,3,3,"High Income",25,19
+53,"Male","Bachelor's Degree",3e+06,5,5,3,3,5,0,0,4,5,4,5,5,4,4,3,4,4,3,4,3,2,5,2,2,3,2,1,2,5,"High Income",22,19
+25,"Male","Master's Degree",1100000,5,5,0,5,0,4,0,3,4,5,5,4,5,4,3,3,3,4,4,4,4,4,1,4,1,5,2,2,4,"Middle-Middle Income",22,18
+73,"Female","Master's Degree",2e+05,0,0,2,0,2,2,2,4,5,5,5,5,4,3,4,3,3,5,2,2,3,3,2,4,5,4,1,2,2,"Low Income",22,20
+45,"Female","Bachelor's Degree",4500000,3,5,4,4,5,1,5,5,3,3,4,4,5,4,3,5,4,4,3,3,2,3,2,3,2,4,4,3,2,"High Income",25,14
+23,"Female","Bachelor's Degree",6e+05,5,5,5,5,5,4,5,5,3,5,5,5,5,5,3,3,5,5,5,5,5,4,4,5,5,5,4,1,5,"Lower-Middle Income",26,18
+22,"Male","Bachelor's Degree",2e+06,4,5,0,3,2,0,0,4,4,5,4,4,4,3,2,3,3,4,4,3,4,5,2,2,3,2,4,2,4,"Upper-Middle Income",19,17
+51,"Male","Bachelor's Degree",9e+05,1,4,1,3,1,0,4,3,4,4,4,4,4,4,4,5,5,5,2,3,3,3,2,3,3,3,3,2,3,"Middle-Middle Income",27,16
+24,"Female","Bachelor's Degree",3e+05,5,5,1,4,1,0,0,3,4,4,4,5,4,4,3,4,4,4,3,4,4,4,2,3,1,3,1,1,3,"Lower-Middle Income",23,17
+25,"Male","Master's Degree",1400000,5,5,5,4,5,0,0,4,4,4,4,4,3,5,1,2,2,3,1,1,1,1,1,3,1,1,1,1,5,"Upper-Middle Income",16,16
+46,"Female","Bachelor's Degree",4e+05,1,5,5,5,5,0,0,5,3,5,5,5,5,5,2,5,5,5,2,2,2,2,2,1,1,3,2,2,3,"Lower-Middle Income",27,18
+49,"Male","High School Graduate",1e+05,0,2,2,0,0,0,0,3,3,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,"Low Income",8,6
+47,"Male","Master's Degree",2.5e+07,5,5,2,4,1,0,5,4,4,5,5,4,4,5,3,2,4,4,4,5,4,4,5,5,3,4,3,4,4,"High Income",22,18
+51,"Male","Master's Degree",2e+05,5,5,0,5,0,0,0,5,5,5,5,5,5,5,1,3,1,4,5,3,4,4,1,5,1,3,4,3,5,"Low Income",19,20
+43,"Female","Bachelor's Degree",8e+05,5,5,3,5,4,3,4,5,5,5,5,5,5,3,4,3,3,4,3,3,3,4,2,4,3,4,3,3,5,"Middle-Middle Income",22,20
+50,"Male","Bachelor's Degree",1e+06,5,5,0,0,2,0,1,4,4,4,5,4,5,5,5,5,5,5,3,3,3,3,3,3,3,1,3,2,3,"Middle-Middle Income",30,17
+23,"Male","Master's Degree",150000,5,5,0,5,3,0,0,4,5,5,5,5,4,4,1,3,3,5,4,4,4,5,1,5,1,5,5,5,5,"Low Income",20,20
+25,"Male","Bachelor's Degree",2e+06,5,5,1,3,0,4,0,3,4,4,4,5,4,2,2,2,2,3,3,2,2,2,2,3,3,4,3,3,3,"Upper-Middle Income",15,17
+24,"Male","Bachelor's Degree",2200000,5,5,1,1,0,0,1,2,4,4,5,5,4,4,5,4,4,3,3,2,5,4,1,5,2,1,1,4,4,"High Income",24,18
+24,"Male","Bachelor's Degree",2200000,5,5,1,1,0,0,1,2,4,4,5,5,4,4,5,4,4,3,3,2,5,4,1,5,2,1,1,4,4,"High Income",24,18
+47,"Male","Master's Degree",6e+05,5,5,3,1,1,4,4,5,4,5,5,5,5,5,3,5,3,5,5,5,5,2,2,5,3,5,1,3,5,"Lower-Middle Income",26,19
+20,"Female","Master's Degree",1500000,5,5,3,2,4,0,0,4,3,2,5,5,4,4,2,4,5,4,4,4,4,5,4,4,3,4,3,3,4,"Upper-Middle Income",23,15
+53,"Male","Bachelor's Degree",1500000,5,5,5,4,0,0,0,5,4,4,4,4,5,5,1,1,1,5,5,5,5,5,5,3,3,3,3,3,3,"Upper-Middle Income",18,16
+27,"Male","Bachelor's Degree",15000,5,5,2,4,5,4,3,5,4,4,5,5,4,4,3,4,4,5,3,3,4,4,2,1,1,5,2,1,5,"Low Income",24,18
+52,"Male","Bachelor's Degree",5e+05,4,5,2,5,2,1,4,5,1,2,1,3,4,4,4,4,4,4,1,3,2,3,1,3,3,3,4,3,1,"Lower-Middle Income",24,7
+57,"Male","Bachelor's Degree",5e+05,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,3,3,3,3,3,3,"Lower-Middle Income",30,20
+49,"Male","Bachelor's Degree",2e+06,0,0,0,0,0,0,0,4,1,1,1,1,5,4,3,4,4,4,4,4,3,5,4,5,4,5,5,3,5,"Upper-Middle Income",24,4
+49,"Male","Bachelor's Degree",5e+05,4,5,0,5,5,5,5,3,5,5,4,5,5,5,4,5,5,5,1,5,1,4,1,5,4,5,5,4,3,"Lower-Middle Income",29,19
+25,"Female","Master's Degree",5e+06,0,5,4,0,3,0,5,2,4,5,5,5,5,5,3,5,5,2,3,4,3,3,2,5,4,5,4,4,5,"High Income",25,19
+50,"Male","High School Graduate",5e+05,4,4,4,5,3,2,5,4,4,4,4,4,4,4,3,3,4,4,4,3,4,4,4,3,4,4,4,4,4,"Lower-Middle Income",22,16
+24,"Male","Master's Degree",1e+06,5,5,5,5,0,2,2,3,5,4,5,3,4,5,4,5,5,5,5,4,5,4,4,5,4,3,4,3,3,"Middle-Middle Income",28,17
+24,"Female","Master's Degree",4e+05,5,5,0,5,0,0,0,3,2,4,4,5,5,4,4,4,4,4,4,2,2,3,1,5,3,1,1,1,3,"Lower-Middle Income",25,15
+60,"Male","Bachelor's Degree",1200000,0,5,0,2,0,0,0,3,3,3,3,3,3,4,4,3,3,5,3,3,3,3,3,3,5,5,3,4,4,"Middle-Middle Income",22,12
+50,"Male","Master's Degree",2400000,5,5,2,5,0,0,0,5,5,5,5,4,5,5,1,5,5,5,2,1,1,4,1,3,1,5,1,1,3,"High Income",26,19
+55,"Male","Bachelor's Degree",5e+07,5,5,3,4,1,0,0,4,5,5,5,3,3,4,2,4,3,4,2,3,2,4,2,2,1,3,1,1,4,"High Income",20,18
+23,"Male","Master's Degree",6e+05,5,4,3,3,3,4,3,5,5,5,5,5,5,2,5,3,5,5,2,5,4,4,4,3,2,2,2,3,5,"Lower-Middle Income",25,20
+28,"Male","Bachelor's Degree",2e+05,0,4,0,1,4,2,0,4,3,4,4,4,3,3,3,3,3,4,4,3,3,4,3,4,1,1,2,1,5,"Low Income",19,15
+57,"Male","Bachelor's Degree",1e+06,5,5,1,4,5,0,3,5,4,5,5,4,5,4,3,4,5,4,4,4,2,4,1,5,3,5,5,2,5,"Middle-Middle Income",25,18
+55,"Male","Master's Degree",3e+05,5,5,5,5,5,5,5,5,4,4,4,4,5,5,4,3,3,5,4,4,2,4,2,3,3,3,3,3,4,"Lower-Middle Income",25,16
+25,"Male","Bachelor's Degree",1e+05,5,5,1,3,4,5,3,5,5,5,5,5,4,3,1,3,3,3,3,3,4,5,2,4,3,4,4,3,5,"Low Income",17,20
+24,"Male","Bachelor's Degree",1500000,3,5,0,4,5,4,0,4,4,5,4,5,2,3,2,2,2,3,5,3,3,5,1,3,1,3,5,1,4,"Upper-Middle Income",14,18
+24,"Male","Bachelor's Degree",1e+05,5,5,0,5,3,4,0,3,4,4,5,4,5,3,3,3,3,3,4,4,4,4,2,4,1,3,2,3,2,"Low Income",20,17
+25,"Female","Bachelor's Degree",5e+05,5,5,3,5,5,1,5,4,2,5,5,5,5,5,2,5,5,2,2,5,5,5,2,5,2,5,5,1,4,"Lower-Middle Income",24,17
+23,"Female","Master's Degree",6e+05,5,5,0,0,0,0,0,5,5,5,5,5,3,5,2,4,4,4,2,1,1,4,1,5,3,5,4,2,5,"Lower-Middle Income",22,20
+22,"Male","Master's Degree",7e+05,5,5,0,5,5,0,4,4,5,5,5,5,4,4,2,2,4,2,4,2,3,4,2,2,2,3,3,2,4,"Middle-Middle Income",18,20
+50,"Male","Master's Degree",166666.99,5,5,2,3,4,3,4,5,5,4,4,3,3,2,2,2,2,2,2,1,2,3,1,5,1,5,3,2,4,"Low Income",13,16
+32,"Male","Master's Degree",7500000,2,2,2,0,2,2,2,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,"High Income",6,12
+26,"Male","Master's Degree",1e+05,5,5,5,4,0,4,0,4,5,5,4,4,4,5,3,3,2,5,2,2,2,2,1,2,2,3,4,1,5,"Low Income",22,18
+53,"Male","Master's Degree",3e+05,5,5,0,0,5,1,1,2,3,3,3,3,1,1,1,1,1,1,1,1,2,1,1,2,1,2,1,2,3,"Lower-Middle Income",6,12
+63,"Male","Doctorate",2400000,5,5,0,0,0,0,0,5,5,5,5,4,4,4,3,4,3,3,4,2,2,4,1,3,2,4,3,1,5,"High Income",21,19
+58,"Male","Doctorate",1500000,0,0,1,0,0,1,0,5,4,4,4,4,4,4,3,4,4,5,1,3,3,3,4,1,2,1,1,1,4,"Upper-Middle Income",24,16
+46,"Male","Bachelor's Degree",1200000,0,0,0,0,0,0,0,5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,"Middle-Middle Income",18,12
+46,"Female","Bachelor's Degree",5e+05,4,4,3,0,0,0,0,4,4,5,5,4,5,4,2,3,2,1,2,2,3,4,1,4,1,5,1,2,5,"Lower-Middle Income",17,18
+58,"Male","Doctorate",1e+06,1,5,4,5,5,3,5,5,4,4,5,4,4,4,3,3,3,4,2,3,3,4,3,3,2,3,3,1,5,"Middle-Middle Income",21,17
+49,"Male","Master's Degree",5e+06,4,5,5,2,2,0,0,4,4,4,4,4,4,4,2,3,3,3,3,3,4,4,3,2,2,2,2,2,4,"High Income",19,16
+41,"Male","Bachelor's Degree",2200000,5,5,0,1,0,0,0,3,4,4,4,4,5,5,4,5,5,5,5,4,4,2,2,5,4,4,4,4,5,"High Income",29,16
+62,"Male","Bachelor's Degree",9e+05,5,5,2,3,0,0,4,4,4,5,5,4,4,4,4,2,4,4,2,3,3,4,1,4,4,4,3,3,4,"Middle-Middle Income",22,18
+43,"Male","Bachelor's Degree",1e+06,5,5,0,5,4,0,0,5,3,3,3,3,4,4,4,4,4,4,3,4,3,5,2,4,4,5,4,3,4,"Middle-Middle Income",24,12
+54,"Male","Bachelor's Degree",4e+05,1,2,0,0,0,0,0,1,3,4,4,2,5,5,5,5,5,5,1,1,1,1,1,4,2,5,5,3,3,"Lower-Middle Income",30,13
+24,"Female","Master's Degree",1200000,5,5,4,4,4,4,2,4,4,4,5,5,5,5,3,5,5,5,4,4,3,5,4,5,3,3,2,2,4,"Middle-Middle Income",28,18
+34,"Male","Master's Degree",6e+05,0,4,3,3,4,3,3,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,"Lower-Middle Income",24,16
+27,"Male","High School Graduate",8e+05,2,5,0,5,0,5,1,4,4,4,4,4,2,3,2,3,2,2,2,2,2,2,2,5,1,2,1,1,5,"Middle-Middle Income",14,16
+45,"Male","High School Graduate",550000,4,5,0,4,1,0,0,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,4,"Lower-Middle Income",18,16
+22,"Male","Master's Degree",2400000,5,5,3,4,5,4,2,4,4,4,5,5,4,3,2,3,4,3,4,3,4,3,4,5,2,2,1,2,4,"High Income",19,18
+53,"Male","Master's Degree",5e+06,4,5,0,2,0,0,5,4,5,5,5,5,4,5,3,5,4,3,4,3,3,4,3,3,3,2,3,3,5,"High Income",24,20
+51,"Male","Doctorate",2e+06,4,4,3,3,3,0,3,5,5,5,5,5,3,4,4,5,4,4,5,4,4,4,4,2,1,1,1,2,5,"Upper-Middle Income",24,20
+38,"Female","Master's Degree",4e+05,5,5,3,3,4,3,3,4,4,3,4,3,3,4,3,4,3,3,3,3,4,3,3,2,1,2,2,2,2,"Lower-Middle Income",20,14
+25,"Male","Bachelor's Degree",840000,4,5,3,0,2,0,0,3,2,5,4,4,3,4,2,3,4,4,4,3,3,4,2,3,1,2,1,4,2,"Middle-Middle Income",20,15
+46,"Male","Master's Degree",1e+07,4,5,3,5,0,0,0,3,2,5,4,4,5,5,2,4,5,5,4,5,4,1,1,4,2,5,2,1,3,"High Income",26,15
+58,"Female","High School Graduate",11200000,5,5,0,0,5,0,0,5,4,3,5,4,5,5,1,5,5,5,5,1,1,1,1,3,2,4,1,1,5,"High Income",26,16
+24,"Female","Bachelor's Degree",456000,1,5,0,3,0,0,0,3,2,4,5,5,4,5,2,3,5,5,3,3,3,3,2,4,3,4,3,3,3,"Lower-Middle Income",24,16
