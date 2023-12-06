@@ -5,29 +5,46 @@ date: "2023-10-25"
 output: html_document
 ---
 
+<!--
+DH general comments: 
+- Like the use of renv and an Rproj file
+- Missing a README to give the reviewer some context
+- Serious issues with violating immutability and data management
+- An EDA still needs to have a narrative structure: introducing the reviewer to the research question and dataset and walking through an exploration of it.  Think of it as giving us a guided tour of the data. 
+-->
+
 # Research Questions #
-    
+
+<!-- DH: Note that this isn't formatted as a list when you knit to HTML -->
 Q1: Whether age-group affects appraisals of technology
 Q2: Whether income-level negatively affects an individuals appraisals of technology (lower = more neg)
 
 # Setup # 
 
+<!-- DH: In an ordinary run of the script, `renv` stuff is handled automatically by `.Rprofile`.  Move this to setup instructions in a README. 
 ```{r}
 library(renv)
 # Using renv restore function to get dependencies 
 restore()
 ```
+--> 
 
 # Read in data #
+<!-- DH: What is this dataset we're going to be looking at? -->
 ```{r}
 library(readr)
 library(here)
 
-SurveyData <- read_csv(here("data","SurveyData.csv"), show_col_types = FALSE)
+## DH: Hard-wrap long lines
+## DH: Spacing after commas
+SurveyData <- read_csv(here("data", "SurveyData.csv"), 
+                       show_col_types = FALSE)
 ```
 
 # Check the packaging #
 ```{r}
+## DH: Put all of your `library()` calls at the top of the script. 
+##     Often we have a section or at least chunk for this kind of setup. 
 library(skimr)
 
 skim(SurveyData)
@@ -39,6 +56,7 @@ Data is 100% complete, no concern over missing values
 
 # Look at the top and the bottom of the data #
 ```{r}
+## DH: You only need to call `library()` once per package
 library(skimr)
 
 if (interactive()) {
@@ -48,6 +66,7 @@ if (interactive()) {
 }
 ```
 
+<!-- DH: Anything notable here, either good or bad?  -->
 
 
 ## Created Variables and Relevant Overview Plots ##
@@ -65,6 +84,8 @@ ggplot(SurveyData, aes(x = Age)) +
   labs(x = "Age", y = "Count", title = "Distribution of Respondents' Age") +
   theme_minimal()
 ```
+
+<!-- DH: Anything notable here?   -->
 
 ```{r}
 library(ggplot2)
@@ -84,6 +105,7 @@ SurveyData %>%
   )
 ```
 
+<!-- DH: Do you know how gender was attributed?  -->
 
 ```{r}
 # Calculating mean and median age
@@ -125,6 +147,7 @@ labels <-
   )
 
 # Create the IncomeCategory variable
+## DH: Violates immutability
 SurveyData$IncomeCategory <-
   cut(
     SurveyData$HouseholdIncome,
@@ -134,6 +157,7 @@ SurveyData$IncomeCategory <-
   )
 
 # add var to the dataframe
+## DH: I guess you're writing this to a different folder so you avoid overwriting and potentially corrupting your raw data.  But then this creates clutter and confusion.  How do I, the person reviewing your code, know which `SurveyData.csv` is which? 
 write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
 ```
 
@@ -143,14 +167,19 @@ write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
 library(dplyr)
 
 # TotalTechConcern calculated by summing all columns that start with 'Risk'
+## DH: Violates immutability
+## DH: This calculation ends up difficult to read. Look at `c_across` for a simpler way to do this.
 SurveyData <- SurveyData %>%
   mutate(TotalTechConcern = rowSums(select(., starts_with("Risk"))))
 
 # add var to the dataframe
+## DH: Repeatedly overwriting your output dataset is a good way to corrupt it.  Consider what happens if someone runs chunks out of order or only runs certain chunks but not others.  Save this until the very end.  
 write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
 ```
 
 ## Variable for TotalTechBenefit Created ##
+
+<!-- DH: DRY: You're doing the same basic thing multiple times: given a set of columns, take the rowwise sum and use that as an aggregate variable.  Use `c_across()` or a custom function to make this easier to read, and do it in a single `mutate()` call so that you don't need to keep violating impredicativity.  -->
 ```{r}
 library(dplyr)
 
@@ -165,6 +194,7 @@ write.csv(SurveyData, "SurveyData.csv", row.names = FALSE)
 
 ## Plots that look at the questions ##
 
+<!-- DH: Note that the line break doesn't appear in the HTML. Use Markdown headers to get the formatting right. -->
 Plotting the correlation between Age and TotalTechConcern
     Relevant Question: Does age-group affect appraisals of technology?
 
@@ -181,8 +211,11 @@ ggplot(data = SurveyData, aes(x = Age, y = TotalTechConcern)) +
   theme_minimal()
 
 # Calculate and print the correlation coefficient
+## DH: Didn't you say above that there were no missing values? 
 correlation <-
-  cor.test(SurveyData$Age, SurveyData$TotalTechConcern, use = "complete.obs") # use handles missing values
+  cor.test(SurveyData$Age, 
+           SurveyData$TotalTechConcern, 
+           use = "complete.obs") # use handles missing values
 print(correlation)
 ```
  
@@ -194,7 +227,10 @@ print(correlation)
 ```{r}
 library(ggplot2)
 
-ggplot(data = SurveyData, aes(x = IncomeCategory, y = TotalTechConcern)) +
+ggplot(data = SurveyData, aes(x = IncomeCategory, 
+                              y = TotalTechConcern)) +
+    ## DH: With so few observations, consider a dotplot or 
+    ##     beeswarm: https://github.com/eclarke/ggbeeswarm
   geom_boxplot() +
   labs(
     x = "Income Category", y = "Total Tech Concern",
@@ -203,12 +239,15 @@ ggplot(data = SurveyData, aes(x = IncomeCategory, y = TotalTechConcern)) +
   theme_minimal()
 
 # ANOVA to test if differences in TotalTechConcern are statistically significant across IncomeCategory
-anova_result <- aov(TotalTechConcern ~ IncomeCategory, data = SurveyData)
+anova_result <- aov(TotalTechConcern ~ IncomeCategory, 
+                    data = SurveyData)
 summary(anova_result)
 ```
 # Results & Follow up 
 
+<!-- DH: You didn't include age in the ANOVA.  Could also include gender to account for the gender imbalance. -->
 P > 0.05 (No significant effect) for both observations. Therefore, income-level and age-group does not correlate with an individuals appraisals of technology. 
+<!-- DH: Remember that you can't accept the null in Fisherian statistics, and Neyman-Pearson requires a power analysis. -->
 
 Problem of Gender Imbalance: To counter the overrepresentation of male participants, future iterations of the survey could aim for a more balanced gender representation.
 
