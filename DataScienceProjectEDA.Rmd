@@ -1,7 +1,7 @@
 ---
-title: "Data Science Project EDA"
-author: "Kaylee Davis"
-date: "2023-10-25"
+title: "Data Science Project EDA - With Reviewer Notes"
+author: "Teagan Zuniga"
+date: "2023-11-20"
 output: html_document
 ---
 
@@ -12,7 +12,7 @@ Q2: Whether income-level negatively affects an individuals appraisals of technol
 
 # Setup # 
 
-```{r}
+```{r eval = FALSE}
 library(renv)
 # Using renv restore function to get dependencies 
 restore()
@@ -33,7 +33,7 @@ library(skimr)
 skim(SurveyData)
 ```
 
-107 rows, 33 columns 
+107 rows, 33 columns *NOTE: THERE ARE 36 COLUMNS, NOT 33*
 Data is 100% complete, no concern over missing values 
 
 
@@ -217,6 +217,18 @@ Diversifying Geographic Representation: The data is gathered from participants r
 Fit for Purpose: The data aligns well with the specific research questions I have, however, the sample representativeness is a weak point of the data. generalizability is not possible with this data, therefore, it is not fit for purpose. Regardless, the data provides a good starting point.  
 
 
+# Reviewer Notes: 
 
+*Overall, the code runs smoothly and it makes sense. I certianly think your current code addresses your research questions. Additionall, I think the research questions are very interesting! However, there are some issues, some of which are big. Notably, do not overwrite your original data! You can add the variables you create to your loaded data without overwriting the data you have saved in your folder. Always preserve the original data. Instead, if you would like to have a data set with these variables, write out a version of the data (with a different name) at the end of your code (before your analysis plots) that writes out this data. Please see my uploaded code review spreadsheet for further comments.*
+
+*To answer the specific questions:*
+
+*1. It is clear what steps I need to do to run the script.*
+
+*2.When I take these steps, the script runs smoothly with no errors.*
+
+*3. The html file is largely reproducible. I get all of the same output and results. However, in order to get the .RMD file to knit, I have to add eval = FALSE to line 15. So, I am unsure how the author got the code to knit without this.*
+
+*4. It is largely easy to read the scirpt and understand what the author is doing and why. The only point of contention is why the author overwrites the original data with the newly created variables (see above note and code review spreadsheet for further explanation). I understand what the code is doing but not why the author decides to do this.*
 
 
